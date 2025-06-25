@@ -1,0 +1,232 @@
+/* ---------- Estilos generales ---------- */
+body {
+    background-image: url('https://us.123rf.com/450wm/tonsofbackgrounds/tonsofbackgrounds1612/tonsofbackgrounds161214971/67854871-gradiente-borr%C3%A3o-cinza-branco-azul-fundo-abstrato.jpg?ver=6');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*-------------------------------------------------*/
+header {
+    width: 1900px;
+    height: 250px ;
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;     
+    background-size: auto 2000px 250px;         
+}
+/*------------------------------nav------------------------------*/
+.navbar {
+    background: linear-gradient(to right, #000000, #09ad92);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 500px;
+}
+
+.navbar a {
+    background-color: #ffffff10;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: #09ad92;
+    transform: scale(1.05);
+}
+/* ---------- Contenido principal ---------- */
+section {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+article {
+    padding: 20px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.diseño1{
+    background: linear-gradient(to right, #000000, #09ad92);
+}
+.diseño2{
+    background: linear-gradient(to right, #09ad92, #000000);
+}
+h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-left: 75px;
+}
+
+.producto img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ---------- Página Productos ---------- */
+.producto {
+    background-image: url(darker_gradient.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.producto h3 {
+    margin: 10px 0;
+}
+
+.producto p {
+    font-weight: bold;
+}
+
+.producto a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ---------- Enlaces ---------- */
+a {
+    text-decoration: none;
+    color: #333;
+}
+/* ---------- Formulario de pago ---------- */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+form input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+form .checkbox-container label {
+    margin: 0;
+    font-weight: normal;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+p {
+    color: #fff;
+}
+
+/* ---------- Botón general reutilizable ---------- */
+.comprar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+/*----------------Extras----------------------*/
+.producto {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.producto img {
+    width: 550px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.comprar {
+    background-color: #09ad92;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.comprar:hover {
+    background-color: #077e6f;
+}
+/*article img {
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+article img:hover {
+    transform: scale(1.1);
+}
+*/

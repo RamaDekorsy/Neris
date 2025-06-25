@@ -1,0 +1,61 @@
+<!-- admin-panel.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administración</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background-color: #eef2f3; }
+    section { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+    input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; }
+    button { padding: 10px 20px; }
+    .propiedad { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Panel de Administración</h1>
+
+  <section>
+    <h2>Agregar Propiedad</h2>
+    <select id="tipo">
+      <option value="venta">En Venta</option>
+      <option value="alquiler">En Alquiler</option>
+    </select>
+    <input type="text" id="titulo" placeholder="Título" />
+    <textarea id="descripcion" placeholder="Descripción"></textarea>
+    <button onclick="agregarPropiedad()">Agregar</button>
+  </section>
+
+  <section>
+    <h2>Propiedades Agregadas</h2>
+    <div id="lista-propiedades"></div>
+  </section>
+
+  <script>
+    function agregarPropiedad() {
+      const tipo = document.getElementById("tipo").value;
+      const titulo = document.getElementById("titulo").value;
+      const descripcion = document.getElementById("descripcion").value;
+
+      if (!titulo || !descripcion) {
+        alert("Completa todos los campos.");
+        return;
+      }
+
+      const div = document.createElement("div");
+      div.className = "propiedad";
+      div.innerHTML = `
+        <strong>${titulo}</strong> (${tipo})<br/>
+        ${descripcion}<br/>
+        <button onclick="this.parentElement.remove()">Eliminar</button>
+      `;
+
+      document.getElementById("lista-propiedades").appendChild(div);
+
+      // Limpiar campos
+      document.getElementById("titulo").value = "";
+      document.getElementById("descripcion").value = "";
+    }
+  </script>
+</body>
+</html>
