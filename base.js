@@ -57,6 +57,6 @@ module.exports = {
   Cliente: mongoose.model("Cliente", ClienteSchema),
   Consulta: mongoose.model("Consulta", ConsultaSchema),
   Propietario: mongoose.model("Propietario", PropietarioSchema),
-  Contacto: mongoose.model("Contacto", ContactoSchema),
+  Contacto: mongoose.model("Contactos", ContactoSchema),
   Imagen: mongoose.model("Imagen", ImagenSchema)
 };
