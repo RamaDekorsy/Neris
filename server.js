@@ -4,14 +4,13 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 // Conectar a MongoDB
-mongoose.connect("mongodb://localhost:27017/neriDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log("Conectado a MongoDB");
-}).catch(err => {
-  console.error("Error al conectar a MongoDB", err);
-});
+mongoose.connect("mongodb://localhost:27017/neriDB")
+  .then(() => {
+    console.log("Conectado a MongoDB");
+  })
+  .catch(err => {
+    console.error("Error al conectar a MongoDB", err);
+  });
 
 // Importar tablas
 const {
@@ -34,4 +33,15 @@ app.get('/', (req, res) => {
 // Iniciar el server
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
+
+
+app.post("/contacto", async (req, res) => {
+  try {
+    const nuevoContacto = new Contacto(req.body);
+    await nuevoContacto.save();
+    res.status(201).send("Contacto guardado exitosamente");
+  } catch (err) {
+    res.status(500).send("Error al guardar el contacto");
+  }
 });
