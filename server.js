@@ -24,6 +24,7 @@ const PORT = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static('public')); // <-- Agrega esto
 
 // Ruta para verificar si funciona
 app.get('/', (req, res) => {
